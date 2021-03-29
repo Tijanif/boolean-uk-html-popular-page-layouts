@@ -24,17 +24,14 @@
 .left-avatar {
   grid-area: left-avatar;
   background-color: lightcoral;
-  margin-left: 50%;
 }
 .left-logo {
   grid-area: left-logo;
   background-color: lawngreen;
-  margin-left: 50%;
 }
 .left-recent {
   grid-area: left-recent;
   background-color: rgb(110, 110, 14);
-  margin-left: 50%;
 }
 .search-bar {
   grid-area: search-bar;
@@ -49,19 +46,43 @@
 .right-news {
   grid-area: right-news;
   background-color: lightpink;
-  margin-right: 50%;
 }
 .right-mostviews {
   grid-area: right-mostviews;
   background-color: lightgrey;
-  margin-right: 50%;
 }
 .right-add-to-your-feed {
   grid-area: right-add-to-your-feed;
   background-color: lightcyan;
-  margin-right: 50%;
 }
 
+/* ipad */
+@media screen and (max-width: 1024px) {
+  .container {
+    display: grid;
+    gap: 10px;
+    grid-template:
+      "header header" 1fr
+      " left-avatar search-bar  " 1fr
+      " left-logo main  " 1fr
+      "left-recent main" 1fr /
+      1fr 1fr;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .right-mostviews {
+    display: none;
+  }
+  .right-news {
+    display: none;
+  }
+  .right-add-to-your-feed {
+    display: none;
+  }
+}
+
+/* Iphone */
 @media screen and (max-width: 500px) {
   .container {
     display: grid;
